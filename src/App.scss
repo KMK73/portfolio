@@ -1,0 +1,50 @@
+$backgroundColor: #252627;
+
+.App {
+  text-align: center;
+  h1 {
+    color: blue;
+  }
+}
+#nav_bar {
+    background: #181818;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+
+    .logo img {
+      max-width: 50px;
+      margin-top: 8px;
+    }
+}
+/* main page */
+#page {
+    background-color: $backgroundColor;
+    background: $backgroundColor url('/assets/images/background90s.svg')no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    .container {
+        width: 100%;
+        will-change: contents;
+        height: 90%;
+        min-height: 566px;
+        position: absolute;
+        opacity: 0;
+        top: 5%;
+        margin: 0 auto;
+        z-index: 1;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
