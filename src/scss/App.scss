@@ -12,7 +12,7 @@
 // Main vertical left navigation
 #nav_bar {
     background: #181818;
-    width: 60px;
+    width: 80px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -20,8 +20,9 @@
     min-height: 500px;
 
     .logo img {
-      max-width: 50px;
       margin-top: 8px;
+      max-width: 65%;
+      margin-left: 12px;
     }
 }
 /* main page */
@@ -61,6 +62,7 @@
         float: left;
         padding: 2px 0;
         margin-left: 20px;
+        max-width: 80px;
       }
   }
 }
