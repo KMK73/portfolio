@@ -1,34 +1,47 @@
 @import "home.scss";
 @import "variables.scss";
+@import "navbar.scss";
+@import "about.scss";
 
 .App {
   text-align: center;
-  font-family: 'Source Code Pro', monospace;
   color: white;
-  h1,h2,h3,h4 {
-    font-family: 'Roboto Mono', monospace;
+}
+span, p {
+  font-family: 'Source-Code-Pro', monospace;
+}
+h2 {
+  font-family: 'Roboto-Mono', monospace;
+}
+
+// loader
+.loader:empty {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #000000;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
-// Main vertical left navigation
-#nav_bar {
-    background: #181818;
-    width: 80px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 3;
-    min-height: 500px;
 
-    .logo img {
-      margin-top: 8px;
-      max-width: 65%;
-      margin-left: 12px;
-    }
-}
+
+
 /* main page */
 #page {
     background-color: $backgroundColor;
-    background: $backgroundColor url('/assets/images/background90s.svg')no-repeat center center;
+    background: $backgroundColor url('/assets/images/background90s-desktop.svg')no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -45,7 +58,18 @@
         -webkit-transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         transform-style: preserve-3d;
+        padding: 0;
     }
+}
+
+//left and right section spacers
+.text-col {
+  margin-top: 20vh;
+  padding-left: 15%;
+  text-align: left;
+}
+.content-col {
+  margin-top: 20vh;
 }
 
 // Tablet Responsive
@@ -64,6 +88,20 @@
         margin-left: 20px;
         max-width: 80px;
       }
+  }
+  .text-col {
+    margin-top: 8%;
+  }
+  .content-col {
+      margin-top: 8vh;
+  }
+
+}
+
+@media (max-width: $mobileSize) {
+  #page {
+    background: $backgroundColor url('/assets/images/background90s-mobile.svg')no-repeat center center;
+    background-size: cover;
   }
 }
 

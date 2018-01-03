@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.about-page {
+  font-size: 16px;
+  .text-col {
+    margin-top: 10vh;
+  }
+  .content-col {
+    margin-top: 10vh;
+  }
+  span {
+    color: $pink; 
+  }
+}

@@ -1,32 +1,16 @@
+@import "variables.scss";
+
 .home-page {
 
-  .text-col {
-    margin-top: 10%;
-  }
-  // .text-zone {
-  //   position: absolute;
-  //   left: 10%;
-  //   top: 50%;
-  //   -webkit-transform: translateY(-50%);
-  //   -ms-transform: translateY(-50%);
-  //   transform: translateY(-50%);
-  //   width: 40%;
-  //   max-height: 90%;
-  //   text-align: left;
-  // }
-  // .content-zone {
-  //   position: relative;
-  //   z-index: 0;
-  //   width: 400px;
-  //   height: 609px;
-  //   position: absolute;
-  //   top: 0;
-  //   right: 15%;
-  //   bottom: 0;
-  //   left: auto;
-  //   margin: auto;
-  // }
 
+  span {
+    color:#777;
+  }
+  h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 34px;
+  }
+  //svg animation for mobile
   #code path,
   #grid{
     stroke-dasharray: 1000;
@@ -39,5 +23,6 @@
       stroke-dashoffset: 0;
     }
   }
+
 
 }

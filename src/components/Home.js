@@ -9,8 +9,15 @@ class Home extends Component {
           <Grid>
             <Row className="show-grid">
               <Col xs={12} sm={6} md={6} className="text-col">
-                  <h1>Kelsey Kjeldsen</h1>
-                  <p className="">About me.</p>
+
+                  <div>
+                    <h2>Hi,</h2>
+                    <h2>I'm Kelsey,</h2>
+                    <h2>I'm a Developer</h2>
+                  </div>
+                  <div className="intro">
+                    <span>Web Developer / Hybrid Mobile App Developer</span>
+                  </div>
               </Col>
               <Col xs={12} sm={6} md={6} className="content-col">
                 <MtSvgLines animate={ true } duration={ 1400 }>
