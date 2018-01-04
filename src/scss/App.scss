@@ -7,6 +7,12 @@
   text-align: center;
   color: white;
 }
+html, body, .App, .App>div {
+  margin: 0;
+  padding: 0;
+  background: $backgroundColor url('/assets/images/background90s-desktop.svg')no-repeat center center;
+  background-size: cover;
+}
 span, p {
   font-family: 'Source-Code-Pro', monospace;
 }
@@ -74,6 +80,12 @@ h2 {
 
 // Tablet Responsive
 @media (max-width: $tabletSize ) {
+  #page {
+    background: $backgroundColor url('/assets/images/background90s-desktop.svg') no-repeat center center;
+    background-size: cover;
+    // height: auto;
+    // position: relative;
+  }
   #nav_bar {
       width: 100%;
       height: 60px;
@@ -100,8 +112,19 @@ h2 {
 
 @media (max-width: $mobileSize) {
   #page {
-    background: $backgroundColor url('/assets/images/background90s-mobile.svg')no-repeat center center;
+    background: $backgroundColor url('/assets/images/background90s-mobile.svg')repeat center center;
     background-size: cover;
+    height: auto;
+    position: relative;
+  }
+  .container {
+    width: 100%;
+    height: auto !important;
+    padding-bottom: 58px;
+    box-sizing: border-box;
+    position: relative !important;
+    top: 0px;
+    overflow: hidden;
   }
 }
 

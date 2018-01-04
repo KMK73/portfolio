@@ -11,20 +11,29 @@ class NavBar extends Component {
               <img src="./../assets/images/logo.png" alt="React Developer Logo, Web Developer Logo , Front End Developer Logo"/>
             </a>
               <section className="main-links show">
-                <Link to='/about' className="">
-                  <img src="./../assets/images/house.svg" class="nav-link" alt="About icon" />
-                  <span>About</span>
-                </Link>
-                <Link to='/work' className="">
-                  <img src="./../assets/images/coding.svg" class="nav-link" alt="Work icon" />
-                  <span>Work</span>
-                </Link>
-                <Link to='/contact' className="">
-                  <img src="./../assets/images/house.svg" class="nav-link" alt="Contact icon" />
-                  <span>Contact</span>
-                </Link>
+                <ul>
+                  <li>
+                    <Link to='/about' className="">
+                      <img src="./../assets/images/house.svg" className="nav-link" alt="About icon" />
+                      <span>About</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/work' className="">
+                      <img src="./../assets/images/coding.svg" className="nav-link" alt="Work icon" />
+                      <span>Work</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/contact' className="">
+                      <img src="./../assets/images/house.svg" className="nav-link" alt="Contact icon" />
+                      <span>Contact</span>
+                    </Link>
+                  </li>
+
+                </ul>
+
               </section>
-              <a id="mobile-link" href=""><i class="fa fa-bars"></i></a>
           </div>
         </nav>
       </div>
