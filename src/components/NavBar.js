@@ -13,8 +13,14 @@ class NavBar extends Component {
               <section className="main-links show">
                 <ul>
                   <li>
+                    <Link to='/' className="">
+                      <img src="./../assets/images/house.svg" className="nav-link" alt="Home icon" />
+                      <span>Home</span>
+                    </Link>
+                  </li>
+                  <li>
                     <Link to='/about' className="">
-                      <img src="./../assets/images/house.svg" className="nav-link" alt="About icon" />
+                      <img src="./../assets/images/avatar.svg" className="nav-link" alt="About icon" />
                       <span>About</span>
                     </Link>
                   </li>
@@ -26,7 +32,7 @@ class NavBar extends Component {
                   </li>
                   <li>
                     <Link to='/contact' className="">
-                      <img src="./../assets/images/house.svg" className="nav-link" alt="Contact icon" />
+                      <img src="./../assets/images/mail.svg" className="nav-link" alt="Contact icon" />
                       <span>Contact</span>
                     </Link>
                   </li>

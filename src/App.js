@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Home from './components/Home';
 import './scss/App.scss';
 import NavBar from './components/NavBar';
 import About from './components/About';
+import Contact from './components/Contact';
+import Work from './components/Work';
 
 class App extends Component {
 
@@ -23,6 +25,8 @@ class App extends Component {
             <div className="container">
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/work" component={Work} />
             </div>
           </div>
 

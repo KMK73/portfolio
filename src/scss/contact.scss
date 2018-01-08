@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.contact-page {
+  // font-family: 'Roboto-Mono', monospace;
+  .text-col {
+    margin-top: 10vh;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    font-size: 16px;
+    margin: 0;
+    padding: 4px 0;
+    width: 100%;
+    background: none;
+    text-align: left;
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 10px;
+  }
+  input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid $teal;
+  }
+  .flat-btn {
+    color: $teal;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid $teal;
+    display: inline;
+    border-radius: 4px;
+    background: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 15px;
+  }
+
+}
