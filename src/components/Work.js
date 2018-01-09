@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { Grid, Col, Button, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Work extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       portfolioItems: []
     }
+
   }
+
+
   //View did load equivalent
   componentDidMount() {
     //avoid CORS issue
@@ -16,7 +20,7 @@ class Work extends Component {
     fetch(dataUrl)
       // set the result to json
       .then(res => res.json())
-      // set the state of movies to the new json
+      // set the state of portfolio items to the new json
       .then(res => {
         this.setState({
           portfolioItems: res
@@ -27,20 +31,33 @@ class Work extends Component {
 
   render() {
     let portfolioItems = this.state.portfolioItems.map((item, index) => {
-      return (
-        <div key={index}>
-        <img src={item._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url} />
-        <p><strong>Title:</strong> {item.title.rendered}</p>
-        <strong>Skills</strong>
-          <p><div><div dangerouslySetInnerHTML={ {__html: item.acf.skills} } /></div></p>
-        </div>
-      )
+        return (
+          <Col xs={12} sm={4} md={4} className="project-item" key={index}>
+            <div  className="">
+               <Link to={`/work/${item.slug}`}>
+                   <img src={item._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url} />
+               </Link>
+                 <div className="item-info">
+                   <p>{item.title.rendered}</p>
+                   <strong>Skills</strong>
+                   {/*<div><div dangerouslySetInnerHTML={ {__html: item.acf.skills} } /></div>*/}
+                 </div>
+            </div>
+          </Col>
 
-    });
+       )
+     });
     return (
-        <div>
-         <h2>Portfolio</h2>
-          {portfolioItems}
+      <div className="main-container">
+         <div className="project-intro">
+           <h2>My Work</h2>
+           <p className="faded">
+             I’ve worked on a variety of projects, from small startups to large re-branding organizations, creating wireframes, websites, and mobile apps.
+             Here is a selection of some of those projects:</p>
+         </div>
+         <Row className="show-grid project-container">
+           {portfolioItems}
+          </Row>
        </div>
     );
   }

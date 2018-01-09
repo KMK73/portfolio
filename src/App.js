@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import About from './components/About';
 import Contact from './components/Contact';
 import Work from './components/Work';
+import WorkDetail from './components/WorkDetail';
 
 class App extends Component {
 
@@ -26,7 +27,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route path="/work" component={Work} />
+              <Route exact path="/work" component={Work} />
+              <Route path="/work/:slug" component={WorkDetail}/>
             </div>
           </div>
 

@@ -1,0 +1,43 @@
+@import "variables.scss";
+
+body, #page {
+  // background: $backgroundColor !important;
+  // background-size: cover;
+}
+
+.project-intro{
+    margin-top: 10vh;
+    padding-left: 10%;
+    text-align: left;
+    padding-right: 4%;
+}
+
+.project-container {
+  padding-left: 10%;
+  text-align: left;
+  padding-right: 4%;
+
+  .project-item {
+    img {
+        // left: 50%;
+        width: 100%;
+        height: 100%;
+        will-change: transform;
+        backface-visibility: hidden;
+        opacity: .6;
+        transition: opacity .4s;
+    }
+    .item-info {
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      font-size: 2rem;
+      z-index: 4;
+      will-change: transform;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) translateZ(0);
+      transition: transform .5s cubic-bezier(.23,1,.32,1),opacity .5s cubic-bezier(.23,1,.32,1),visibility .5s cubic-bezier(.23,1,.32,1);
+    }
+  }
+}
