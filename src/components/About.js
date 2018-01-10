@@ -13,10 +13,10 @@ class About extends Component {
                     <h1>About Me</h1>
 
                     <p>
-                      Developer currently living in <span>Miami. </span>
+                      90's kid currently living in <span>Miami. </span>
                        I started my tech career as an Information Architect and studied UX/UI. </p>
                     <p>
-                        From there I moved onto Hybrid App Development which is my preffered style of development, and Web development.
+                        From there I moved onto Hybrid App Development(preferred development), and Web Development.
                         I have experience with HTML, CSS, JS (ES5, ES6), AngularJS, React.js, building small web apps, and wireframing. I also work with small WordPress sites and have some experience with PHP.
                     </p>
                     <p>In my spare time, I watch a lot of sports, try to crossfit, and walk my dog.</p>

@@ -6,7 +6,7 @@ body, #page {
 }
 
 .project-intro{
-    margin-top: 10vh;
+    // margin-top: 10vh;
     padding-left: 10%;
     text-align: left;
     padding-right: 4%;
@@ -16,16 +16,28 @@ body, #page {
   padding-left: 10%;
   text-align: left;
   padding-right: 4%;
+  margin-top: 20px;
 
   .project-item {
+    margin-bottom: 12px;
+
+    :hover {
+      transition: 0.5s; 
+      img {
+        opacity: 1;
+      }
+      color: black;
+    }
     img {
         // left: 50%;
         width: 100%;
         height: 100%;
         will-change: transform;
         backface-visibility: hidden;
-        opacity: .6;
+        opacity: .5;
         transition: opacity .4s;
+        border-radius: 3px;
+        height: 250px;
     }
     .item-info {
       position: absolute;
@@ -38,6 +50,28 @@ body, #page {
       visibility: visible;
       transform: translateY(0) translateZ(0);
       transition: transform .5s cubic-bezier(.23,1,.32,1),opacity .5s cubic-bezier(.23,1,.32,1),visibility .5s cubic-bezier(.23,1,.32,1);
+
+      span {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}
+
+@media (max-width: $tabletSize){
+  .project-container,
+  .project-intro {
+      padding-left: 4%;
+  }
+
+}
+
+@media (max-width: $mobileSize){
+  .project-item  {
+    img {
+        height: inherit !important;
     }
   }
 }

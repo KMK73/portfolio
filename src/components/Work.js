@@ -32,14 +32,16 @@ class Work extends Component {
   render() {
     let portfolioItems = this.state.portfolioItems.map((item, index) => {
         return (
-          <Col xs={12} sm={4} md={4} className="project-item" key={index}>
+          <Col xs={12} sm={6} md={4} className="project-item" key={index}>
             <div  className="">
                <Link to={`/work/${item.slug}`}>
                    <img src={item._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url} />
                </Link>
                  <div className="item-info">
                    <p>{item.title.rendered}</p>
-                   <strong>Skills</strong>
+                   <div class="skills">
+                     <span>{item.acf.skill_description}</span>
+                   </div>
                    {/*<div><div dangerouslySetInnerHTML={ {__html: item.acf.skills} } /></div>*/}
                  </div>
             </div>
