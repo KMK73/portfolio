@@ -43,7 +43,39 @@ class Contact extends Component {
                      </form>
                 </Col>
                 <Col xs={12} sm={12} md={6} className="content-col">
+                  <div className="social-links">
 
+
+                      <Col xs={12} sm={6} md={6}>
+                        <div className="box box--front" id="box1">
+                          <div className="border"></div>
+                          <div className="content">
+                            <h3>Follow Me</h3>
+
+                            <ul>
+                              <li>
+                                <Button bsStyle="link" bsSize="large" href="https://www.linkedin.com/in/kelsey-kjeldsen/" target="_blank"  >
+                                  <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+                                     <span>LinkedIn</span>
+                                </Button>
+                              </li>
+                              <li>
+                                <Button bsStyle="link" bsSize="large" href="https://twitter.com/TheCouchCoder" target="_blank" >
+                                  <i className="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                                   <span>Twitter</span>
+                                </Button>
+                              </li>
+                              <li>
+                                <Button bsStyle="link" bsSize="large" href="https://github.com/KMK73/" target="_blank" >
+                                  <i className="fa fa-github-square fa-2x" aria-hidden="true"></i>
+                                     <span>GitHub</span>
+                                </Button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </Col>
+                  </div>
                 </Col>
               </Row>
             </Grid>
