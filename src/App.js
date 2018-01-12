@@ -12,6 +12,15 @@ class App extends Component {
 
   componentDidMount() {
     console.log('component did mount');
+    // const spinner = document.getElementById('ipl-progress-indicator')
+    // if(spinner){
+    //   setTimeout(() => {
+    //     spinner.classList.add('available')
+    //     setTimeout(() => {
+    //       spinner.outerHTML = ''
+    //     }, 2000)
+    //   }, 1000)
+    // }
   }
 
   render() {

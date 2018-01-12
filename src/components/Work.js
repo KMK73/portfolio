@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Grid, Col, Button, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Loader from './Loader';
 
 class Work extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
+      workItems: [],
       portfolioItems: []
     }
 
@@ -14,6 +17,8 @@ class Work extends Component {
 
   //View did load equivalent
   componentDidMount() {
+    const spinner = document.getElementById('ipl-progress-indicator')
+
     //avoid CORS issue
     //var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     let dataUrl = "http://kelseykjeldsen.com/wp-json/wp/v2/work?_embed";
@@ -23,14 +28,35 @@ class Work extends Component {
       // set the state of portfolio items to the new json
       .then(res => {
         this.setState({
-          portfolioItems: res
+          workItems: res
         })
+        // stop showing the spinner
+        if(spinner){
+          spinner.classList.add('available');
+          //spinner.outerHTML = '';
+          this.setState({
+            isLoading: false
+          })
+        }
       })
       .catch(error => console.log(error.toString()))
+
+      // get portfolio items that are tagged featured
+      // let portfolioURL = "http://kelseykjeldsen.com/wp-json/wp/v2/portfolio?_embed";
+      // fetch(dataUrl)
+      //   // set the result to json
+      //   .then(res => res.json())
+      //   // set the state of portfolio items to the new json
+      //   .then(res => {
+      //     this.setState({
+      //       workItems: res
+      //     })
+      //   })
+      //   .catch(error => console.log(error.toString()))
   }
 
   render() {
-    let portfolioItems = this.state.portfolioItems.map((item, index) => {
+    let workItems = this.state.workItems.map((item, index) => {
         return (
           <Col xs={12} sm={6} md={4} className="project-item" key={index}>
             <div  className="">
@@ -50,17 +76,20 @@ class Work extends Component {
        )
      });
     return (
-      <div className="main-container">
-         <div className="project-intro">
-           <h2>My Work</h2>
-           <p className="faded">
-             I’ve worked on a variety of projects, from small startups to large re-branding organizations, creating wireframes, websites, and mobile apps.
-             Here is a selection of some of those projects:</p>
-         </div>
-         <Row className="show-grid project-container">
-           {portfolioItems}
-          </Row>
-       </div>
+      <div className="">
+        <Loader />
+          <div className="main-container">
+             <div className="project-intro">
+               <h2>My Work</h2>
+               <p className="faded">
+                 I’ve worked on a variety of projects, from small startups to large re-branding organizations, creating wireframes, websites, and mobile apps.
+                 Here is a selection of some of those projects:</p>
+             </div>
+             <Row className="show-grid project-container">
+               {workItems}
+              </Row>
+           </div>
+     </div>
     );
   }
 }

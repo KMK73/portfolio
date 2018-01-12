@@ -7,7 +7,8 @@ class WorkDetail extends Component {
     //const slug = this.props.match.params.slug;
     this.state = {
       slug: this.props.match.params.slug,
-      work: []
+      work: [],
+      portfolio: []
     }
 
   }
@@ -32,14 +33,17 @@ class WorkDetail extends Component {
   render() {
     let portfolioItem = this.state.work.map((item, index) => {
       return (
-        <div key={index}>
+          <div key={index}>
 
-          <img src={item.acf.featured_image} />
+            <img src={item.acf.featured_image} />
 
-        <p><strong>Title:</strong> {item.title.rendered}</p>
-        <strong>Skills</strong>
-          <div><div dangerouslySetInnerHTML={ {__html: item.acf.skills} } /></div>
-        </div>
+            <p><strong>Title:</strong> {item.title.rendered}</p>
+            <strong>Skills</strong>
+              <div><div dangerouslySetInnerHTML={ {__html: item.acf.skills} } /></div>
+            <a href={item.acf.link} alt="live link" target="_blank">See Project</a>
+
+          </div>
+
       )
 
     });
