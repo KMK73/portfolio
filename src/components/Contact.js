@@ -31,7 +31,7 @@ class Contact extends Component {
                 <Col xs={12} sm={12} md={6} className="text-col">
                     <h2>Contact Me</h2>
                     <p>Any comments or questions feel free to reach out to me.</p>
-                    <form onSubmit={this.handleSubmit}>
+                    {/* <form onSubmit={this.handleSubmit}>
                        <label>Name</label>
                         <input type="text" value={this.state.name} />
                         <label>Email</label>
@@ -40,17 +40,33 @@ class Contact extends Component {
                          <input type="textarea" value={this.state.message} onChange={this.handleChange} />
 
                        <input className="flat-btn" type="submit" value="Submit" />
-                     </form>
+                     </form> */}
+                        <div className="flipper">
+                            <div className="content">
+                                <div className="content__container">
+                                  <p className="content__container__text">
+                                    I CAN
+                                  </p>
+                                  
+                                  <ul className="content__container__list">
+                                    <li className="content__container__list__item">code !</li>
+                                    <li className="content__container__list__item">wireframe !</li>
+                                    <li className="content__container__list__item">watch sports !</li>
+                                    <li className="content__container__list__item">drink coffee !</li>
+                                  </ul>
+                                </div>
+                              </div>
+                          </div>
                 </Col>
                 <Col xs={12} sm={12} md={6} className="content-col">
                   <div className="social-links">
 
 
-                      <Col xs={12} sm={6} md={6}>
+                      <Col xs={12} sm={12} md={8}>
                         <div className="box box--front" id="box1">
                           <div className="border"></div>
                           <div className="content">
-                            <h3>Follow Me</h3>
+                            <h3>Reach out here:</h3>
 
                             <ul>
                               <li>
@@ -69,6 +85,12 @@ class Contact extends Component {
                                 <Button bsStyle="link" bsSize="large" href="https://github.com/KMK73/" target="_blank" >
                                   <i className="fa fa-github-square fa-2x" aria-hidden="true"></i>
                                      <span>GitHub</span>
+                                </Button>
+                              </li>
+                              <li>
+                                <Button bsStyle="link" bsSize="large" href="mailto:kelsey.kjeldsen@gmail.com" target="_blank">
+                                  <i className="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+                                     <span>Email</span>
                                 </Button>
                               </li>
                             </ul>
